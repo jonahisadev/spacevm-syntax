@@ -19,6 +19,9 @@
 		},
 		{
 			"include": "#numbers"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
@@ -31,7 +34,7 @@
 		"registers": {
 			"patterns": [{
 				"name": "entity.other.attribute-name.spacevm",
-				"match": "\\B%[abcdxy]x\\b"
+				"match": "\\B%[abcdxy][xlh]\\b"
 			}]
 		},
 		"labels": {
@@ -50,6 +53,12 @@
 			"patterns": [{
 				"name": "constant.numeric",
 				"match": "\\$[0-9]+"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line",
+				"match": ";.+"
 			}]
 		},
 		"strings": {
