@@ -3,6 +3,9 @@
 	"name": "SpaceVM",
 	"patterns": [
 		{
+			"include": "#labels"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -12,16 +15,13 @@
 			"include": "#directives"
 		},
 		{
-			"include": "#labels"
-		},
-		{
 			"include": "#strings"
 		},
 		{
 			"include": "#numbers"
 		},
 		{
-			"include": "#comments"
+			"include": "#comment"
 		}
 	],
 	"repository": {
@@ -40,7 +40,7 @@
 		"labels": {
 			"patterns": [{
 				"name": "entity.name.function.spacevm",
-				"match": ".+:|@\\w+\\b"
+				"match": "^\\b.*:|@\\w+\\b"
 			}]
 		},
 		"directives": {
@@ -51,14 +51,14 @@
 		},
 		"numbers": {
 			"patterns": [{
-				"name": "constant.numeric",
+				"name": "constant.numeric.spacevm",
 				"match": "\\$[0-9]+"
 			}]
 		},
-		"comments": {
+		"comment": {
 			"patterns": [{
-				"name": "comment.line",
-				"match": ";.+"
+				"name": "comment.line.character.spacevm",
+				"match": ";\\Z|;.*$"
 			}]
 		},
 		"strings": {

@@ -2,7 +2,7 @@
     "name": "spacevm",
     "displayName": "SpaceVM",
     "description": "Syntax highlighting for SpaceVM",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "publisher": "jonahisadev",
     "engines": {
         "vscode": "^1.12.0"
