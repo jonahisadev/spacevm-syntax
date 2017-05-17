@@ -1,0 +1,26 @@
+{
+    "name": "spacevm",
+    "displayName": "SpaceVM",
+    "description": "Syntax highlighting for SpaceVM",
+    "version": "0.0.1",
+    "publisher": "jonahisadev",
+    "engines": {
+        "vscode": "^1.12.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "spacevm",
+            "aliases": ["SpaceVM", "spacevm"],
+            "extensions": [".vm",".space"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "spacevm",
+            "scopeName": "source.spacevm",
+            "path": "./syntaxes/spacevm.tmLanguage.json"
+        }]
+    }
+}

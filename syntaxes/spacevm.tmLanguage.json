@@ -1,0 +1,68 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SpaceVM",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#registers"
+		},
+		{
+			"include": "#directives"
+		},
+		{
+			"include": "#labels"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.spacevm",
+				"match": "\\b(mov|add|sub|call|ret|sysi|mul|dic|sxr|sxl|inc|dec|push|pop|cmp|jmp|jne|je|jg|jl|jge|jle|jz|jnz|pushw|popw|and|or|xor|hlt|ptr|stb|ldb|stw|ldw|str|pusha|popa)\\b"
+			}]
+		},
+		"registers": {
+			"patterns": [{
+				"name": "entity.other.attribute-name.spacevm",
+				"match": "\\B%[abcdxy]x\\b"
+			}]
+		},
+		"labels": {
+			"patterns": [{
+				"name": "entity.name.function.spacevm",
+				"match": ".+:|@\\w+\\b"
+			}]
+		},
+		"directives": {
+			"patterns": [{
+				"name": "variable.language.spacevm",
+				"match": "#\\w+"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric",
+				"match": "\\$[0-9]+"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.spacevm",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.spacevm",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.spacevm"
+}
